@@ -1,0 +1,22 @@
+{
+  "name": "api-aula1",
+  "version": "1.0.0",
+  "description": "Aula 1 - UC 14",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "Leonardo Mendes",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "knex": "^3.1.0",
+    "mysql2": "^3.12.0",
+    "nodemon": "^3.1.9",
+    "qrcode": "^1.5.4",
+    "speakeasy": "^2.0.0"
+  }
+}
