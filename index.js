@@ -1,5 +1,6 @@
 const express = require('express')
 const cors = require('cors')
+require('dotenv').config()
 
 const router = require('./src/routes/routes')
 
@@ -8,8 +9,8 @@ app.use(cors())
 app.use(express.json())
 app.use(router)
 
-app.listen(4000, () => {
-    console.log("Aplicação esta rodando na porta 4000")
+app.listen(process.env.PORT, () => {
+    console.log(`Aplicação esta rodando na porta ${process.env.PORT}`)
 })
 
 app.get('/', (request, response) => {
