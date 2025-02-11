@@ -30,7 +30,7 @@ class UserController {
             const token = jwt.sign({id: usuario[0].id}, 'Titos@2025!', {
                 expiresIn: '1h'
             })
-            response.status(200).json({token})
+            response.status(200).json({cod: 0, token})
                 
 
         }).catch(error => {
