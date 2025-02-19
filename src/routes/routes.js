@@ -5,6 +5,7 @@ const TaskController = require('../controllers/TaskController')
 const UserController = require('../controllers/UserController')
 const verificarToken = require('../middleware/authMiddleware')
 const TwoFaController = require('../controllers/TwoFaController')
+const PaymentController = require('../controllers/PaymentController')
 
 router.post('/usuario/criar', UserController.cadastrarUsuario)
 router.post('/usuario/autenticar', UserController.autenticarUsuario)
@@ -22,5 +23,7 @@ router.get('/tarefas', verificarToken, TaskController.listarTarefas)
 router.get('/tarefa/:id', verificarToken, TaskController.listarUmaTarefa) 
 router.put('/tarefa/atualizar/:id', verificarToken, TaskController.atualizarTarefa)
 router.delete('/tarefa/excluir/:id', verificarToken, TaskController.removerTarefa)
+
+router.post('/pagamento', verificarToken, PaymentController.processarPagamento)
 
 module.exports = router
